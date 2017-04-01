@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-else</title>
+</head>
+<body>
+    <div id="app">
+        <p v-if="tag">你好！vue.js！</p>
+        <p v-else>这里是例外情况</p>
+    </div>
+
+    <script type="text/javascript" src="lib/js/vue.js"></script>
+    <script type="text/javascript">
+        var app = new Vue({
+            el:'#app',    //注意选择器
+            data:{
+                tag:true
+            }
+        });
+    </script>
+</body>
+</html>

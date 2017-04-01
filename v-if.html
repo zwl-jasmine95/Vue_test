@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-if</title>
+</head>
+<body>
+    <div class="app">     <!--这里不一定要用id，class也行的，只要js里的选择器对应-->
+        <span v-if="tag">你好！vue.js！</span>   <!--v-if根据条件表达式的值来执行元素的插入或者删除行为。-->
+    </div>
+
+    <script type="text/javascript" src="lib/js/vue.js"></script>
+    <script type="text/javascript">
+        var app = new Vue({
+            el:'.app',    //注意选择器
+            data:{
+                tag:true
+            }
+        });
+    </script>
+</body>
+</html>

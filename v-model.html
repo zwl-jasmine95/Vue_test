@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-model</title>
+</head>
+<body>
+    <div id="app">
+        <p>{{ message }}</p>
+        <input type="text" v-model="message">
+        <button v-on:click="alertMessage">弹出输入框内容</button>
+    </div>
+
+    <script type="text/javascript" src="lib/js/vue.js"></script>
+    <script type="text/javascript">
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue.js!'
+            },
+            // 在 `methods` 对象中定义方法
+            methods: {
+                alertMessage: function () {
+                    //方法中的this指向app
+                    alert(this.message);
+                }
+            }
+        })
+    </script>
+</body>
+</html>
