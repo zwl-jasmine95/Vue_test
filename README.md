@@ -15,4 +15,4 @@ vue.js学习之路 <br>
  
 综合案例：<br>
 [简单表格demo](https://zwl-jasmine95.github.io/Vue_test/demo1/table.html) <br>
-[可增删表格示例](https://zwl-jasmine95.github.io/Vue_test/demo1/editTable.html) <br>
+[可增删表格demo](https://zwl-jasmine95.github.io/Vue_test/demo1/editTable.html) <br>
