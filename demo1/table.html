@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格</title>
+    <link rel="stylesheet" href="../lib/css/bootstrap.min.css">
+</head>
+<body>
+    <table id="myTable"  class="table table-striped">
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>年龄</th>
+            </tr>
+        </thead>
+       <tbody>
+           <tr v-for="item in items">
+               <td>{{item.name}}</td>
+               <td>{{item.sex}}</td>
+               <td>{{item.age}}</td>
+           </tr>
+       </tbody>
+    </table>
+
+    <script type="text/javascript" src="../lib/js/vue.js"></script>
+    <script type="text/javascript">
+        var vm = new Vue({
+            el:'#myTable',
+            data:{
+                items:[
+                    {
+                        name:'张姗',
+                        sex:'女',
+                        age:'42'
+                    },
+                    {
+                        name:'李四',
+                        sex:'男',
+                        age:'33'
+                    },
+                    {
+                        name:'王五',
+                        sex:'男',
+                        age:'58'
+                    }
+                ]
+            }
+        });
+    </script>
+</body>
+</html>

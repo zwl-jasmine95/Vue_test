@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>实时表格编辑</title>
+    <link rel="stylesheet" href="../lib/css/bootstrap.min.css">
+    <style>
+        body{
+            padding:50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="editTable">
+        <form class="form-horizontal" role="form">
+            <div class="form-group">
+                <label for="name" class="col-sm-2 control-label">姓名</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="name" placeholder="请输入名字" v-model="newItem.name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="age" class="col-sm-2 control-label">年龄</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="age" placeholder="请输入年龄" v-model="newItem.age">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="sex" class="col-sm-2 control-label">性别</label>
+                <div class="col-sm-10">
+                    <select name="" id="sex" class="form-control" v-model="newItem.sex">
+                        <option value="男">男</option>
+                        <option value="女">女</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="button" class="btn btn-primary" v-on:click="creatItem">添加</button>
+                </div>
+            </div>
+        </form>
+
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>性别</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr v-for="(item,index) in items">
+                <td>{{item.name}}</td>
+                <td>{{item.age}}</td>
+                <td>{{item.sex}}</td>
+                <td><button type="button" class="btn btn-primary" v-on:click="deleteItem(index)">删除</button></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script type="text/javascript" src="../lib/js/vue.js"></script>
+    <script type="text/javascript">
+        var vm = new Vue({
+            el:'#editTable',
+            data:{
+                newItem:{
+                    name:'',
+                    sex:'女',
+                    age:'0'
+                },
+                items:[
+                    {
+                        name:'张姗',
+                        sex:'女',
+                        age:'42'
+                    },
+                    {
+                        name:'李四',
+                        sex:'男',
+                        age:'33'
+                    },
+                    {
+                        name:'王五',
+                        sex:'男',
+                        age:'58'
+                    }
+                ]
+            },
+            //事件处理
+            methods:{
+                creatItem:function () {
+                    this.items.push(this.newItem);  //this指向data
+                    // 添加完newItem对象后，重置newItem对象
+                    this.newItem = {name: '', age: 0, sex: '女'}
+                },
+
+                /**
+                 * 根据表格行的索引删除该表格行
+                 * @param  {[number]} index [表格行的索引]
+                 * @return
+                 */
+                deleteItem:function (index) {
+                    this.items.splice(index,1);
+                }
+            }
+            
+        });
+    </script>
+</body>
+</html>
