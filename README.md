@@ -3,5 +3,12 @@ vue.js学习之路 <br>
 ## 1.vue.js基础知识
  以下示例，在博客中有具体讲解，博客链接:http://www.cnblogs.com/jasmine-95/p/6652783.html  <br>
  
+ [hello示例](https://zwl-jasmine95.github.io/Vue_test/hello.html) <br>
+ 
  常用内置指令： <br>
- [v-for指令demo](https://zwl-jasmine95.github.io/Vue_test/v-for.html)
+ [v-bind指令demo](https://zwl-jasmine95.github.io/Vue_test/v-bind.html) <br>
+ [v-else指令demo](https://zwl-jasmine95.github.io/Vue_test/v-else.html) <br>
+ [v-for指令demo](https://zwl-jasmine95.github.io/Vue_test/v-for.html) <br>
+ [v-if指令demo](https://zwl-jasmine95.github.io/Vue_test/v-if.html) <br>
+ [v-model指令demo](https://zwl-jasmine95.github.io/Vue_test/v-model.html) <br>
+ [v-on指令demo](https://zwl-jasmine95.github.io/Vue_test/v-on.html) <br>
