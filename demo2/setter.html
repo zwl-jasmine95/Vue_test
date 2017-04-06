@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计算属性getter和setter</title>
+</head>
+<body>
+    <div id="computed-demo">
+        <p>{{message}}</p>
+        <p>{{reversedMessage }}</p>
+    </div>
+
+    <script type="text/javascript" src="../lib/js/vue.js"></script>
+    <script type="text/javascript">
+        var vm = new Vue({
+            el:'#computed-demo',
+            data:{
+                message : 'Hello Computed!'
+            },
+            computed:{
+                reversedMessage:{
+                    //getter
+                    get:function () {
+                        return this.message.split('').reverse().join('');  //反转message
+                    },
+                    //setter
+                    set:function (newMessage) {
+                        this.message = newMessage;
+                    }
+                }
+            }
+        });
+        vm.message = 'getter and setter!';
+    </script>
+</body>
+</html>
