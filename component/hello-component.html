@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件（component）的基本使用</title>
+</head>
+<body>
+    <div id="component-demo">
+        <hello-component></hello-component>
+    </div>
+
+<script type="text/javascript" src="../lib/js/vue.js"></script>
+<script type="text/javascript">
+    Vue.component('hello-component',{
+        template:'<h1>hello component!</h1>'
+    });
+
+    var vm = new Vue({
+        el:'#component-demo'
+    });
+
+
+</script>
+</body>
+</html>
