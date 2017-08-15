@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>props单项数据绑定</title>
+    <link rel="stylesheet" href="../lib/css/bootstrap.min.css">
+</head>
+<body>
+<div id="demo">
+    <table class="table table-striped">
+        <tr>
+            <td colspan="3">父组件数据</td>
+        </tr>
+        <tr>
+            <td>姓名</td>
+            <td>{{parentName}}</td>
+            <td><input type="text" v-model="parentName"/></td>
+        </tr>
+        <tr>
+            <td>年龄</td>
+            <td>{{parentAge}}</td>
+            <td><input type="text" v-model="parentAge"/></td>
+        </tr>
+    </table>
+
+    <!--注意这里camelCased (驼峰式) 命名的 prop 需要转换为相对应的 kebab-case (短横线隔开式) 命名-->
+    <child-component v-bind:child-name="parentName" v-bind:child-age="parentAge"></child-component>
+
+</div>
+
+<template id="myComponent">
+    <table class="table table-striped">
+        <tr>
+            <td colspan="3">子组件数据</td>
+        </tr>
+        <tr>
+            <td>姓名</td>
+            <td>{{childName}}</td>
+            <td><input type="text" v-model="childName"/></td>
+        </tr>
+        <tr>
+            <td>年龄</td>
+            <td>{{childAge}}</td>
+            <td><input type="text" v-model="childAge"/></td>
+        </tr>
+    </table>
+</template>
+
+<script type="text/javascript" src="../lib/js/vue.js"></script>
+<script type="text/javascript">
+
+    var child = {
+        props: ['childName','childAge'],
+        template:'#myComponent'
+    };
+
+    var vm = new Vue({
+        el:'#demo',
+        data:{
+            parentName:'*茉莉花开*',
+            parentAge:'22'
+
+        },
+        components:{
+            'child-component':child
+        }
+    });
+</script>
+</body>
+</html>

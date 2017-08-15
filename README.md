@@ -31,5 +31,7 @@ vue.js学习之路 <br>
  props——父组件向子组件传递信息：<br>
  [props传递静态数据](https://zwl-jasmine95.github.io/Vue_test/component/static-props.html) <br>
  [props传递动态数据](https://zwl-jasmine95.github.io/Vue_test/component/dynamic-props.html) <br>
+ [props单项数据绑定](https://zwl-jasmine95.github.io/Vue_test/component/single-props.html) <br>
+ [props双项数据绑定](https://zwl-jasmine95.github.io/Vue_test/component/double-props.html) <br>
  [props验证](https://zwl-jasmine95.github.io/Vue_test/component/verification-props.html) <br>
 
