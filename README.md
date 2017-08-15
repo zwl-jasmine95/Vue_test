@@ -16,3 +16,12 @@ vue.js学习之路 <br>
 综合案例：<br>
 [简单表格demo](https://zwl-jasmine95.github.io/Vue_test/demo1/table.html) <br>
 [可增删表格demo](https://zwl-jasmine95.github.io/Vue_test/demo1/editTable.html) <br>
+
+## 2.vue.js知识之组件的使用
+ 以下示例，在博客中有具体讲解，博客链接:http://www.cnblogs.com/jasmine-95/p/6652783.html  <br>
+
+ [全局组件](https://zwl-jasmine95.github.io/Vue_test/component/hello-component.html) <br>
+ [局部组件](https://zwl-jasmine95.github.io/Vue_test/component/hello-component.html) <br>
+
+
+
