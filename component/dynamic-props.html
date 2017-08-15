@@ -6,12 +6,12 @@
 </head>
 <body>
     <div id="demo">
-        <input type="text" v-model="parentMessage">
+        父组件：<input type="text" v-model="parentMessage">
         <child-component v-bind:message="parentMessage"></child-component>
     </div>
 
     <template id="myComponent">
-        <h1>父组件的信息为：{{message}}</h1>
+        <h3>子组件获取的信息为：{{message}}</h3>
     </template>
 
     <script type="text/javascript" src="../lib/js/vue.js"></script>
