@@ -23,5 +23,9 @@ vue.js学习之路 <br>
  [全局组件](https://zwl-jasmine95.github.io/Vue_test/component/hello-component.html) <br>
  [局部组件](https://zwl-jasmine95.github.io/Vue_test/component/local-component.html) <br>
 
+ 组件字符串模板<br>
+ [使用script标签](https://zwl-jasmine95.github.io/Vue_test/component/script.html) <br>
+ [使用template标签](https://zwl-jasmine95.github.io/Vue_test/component/template.html) <br>
+
 
 

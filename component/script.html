@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用script标签</title>
+</head>
+<body>
+<div id="demo">
+    <my-component></my-component>
+</div>
+
+<script type="text/x-template" id="myComponent">
+    <h1>组件使用之使用script标签</h1>
+</script>
+
+<script type="text/javascript" src="../lib/js/vue.js"></script>
+<script type="text/javascript">
+    Vue.component('my-component',{
+        template:'#myComponent'
+    });
+
+    var vm = new Vue({
+        el:'#demo'
+    });
+</script>
+</body>
+</html>
