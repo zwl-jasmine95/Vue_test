@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>props静态数据</title>
+</head>
+<body>
+    <div id="demo">
+        <child-component message="hello props!"></child-component>
+    </div>
+
+    <template id="myComponent">
+        <h1>{{message}}</h1>
+    </template>
+
+    <script type="text/javascript" src="../lib/js/vue.js"></script>
+    <script type="text/javascript">
+
+        var child = {
+            // 声明 props
+            props: ['message'],
+            // 就像 data 一样，prop 可以用在模板内
+            // 同样也可以在 vm 实例中像“this.message”这样使用
+            template:'#myComponent'
+        };
+
+        var vm = new Vue({
+            el:'#demo',
+            components:{
+                'child-component':child
+            }
+        });
+    </script>
+</body>
+</html>

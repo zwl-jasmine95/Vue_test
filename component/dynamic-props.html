@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>props动态数据</title>
+</head>
+<body>
+    <div id="demo">
+        <input type="text" v-model="parentMessage">
+        <child-component v-bind:message="parentMessage"></child-component>
+    </div>
+
+    <template id="myComponent">
+        <h1>父组件的信息为：{{message}}</h1>
+    </template>
+
+    <script type="text/javascript" src="../lib/js/vue.js"></script>
+    <script type="text/javascript">
+
+        var child = {
+            props: ['message'],
+            template:'#myComponent'
+        };
+
+        var vm = new Vue({
+            el:'#demo',
+            data:{
+                parentMessage:'这里是父组件！'
+            },
+            components:{
+                'child-component':child
+            }
+        });
+    </script>
+</body>
+</html>

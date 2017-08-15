@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>props验证</title>
+</head>
+<body>
+    <div id="demo">
+        <local-component></local-component>
+    </div>
+    <template id="myComponent">
+        <h1>{{message}}</h1>
+    </template>
+
+    <script type="text/javascript" src="../lib/js/vue.js"></script>
+    <script type="text/javascript">
+
+        var child = {
+            template:'#myComponent'
+        };
+
+        var vm = new Vue({
+            el:'#demo',
+            components:{
+                'local-component':child
+            }
+        });
+    </script>
+</body>
+</html>
