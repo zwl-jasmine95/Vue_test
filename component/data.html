@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>data的限制</title>
+</head>
+<body>
+<div id="component-demo">
+    <my-component></my-component>
+</div>
+
+<script type="text/javascript" src="../lib/js/vue.js"></script>
+<script type="text/javascript">
+
+//错误写法：
+//    Vue.component('hello-component',{
+//        template:'<h1>{{message}}</h1>',
+//        data:{
+//            message : 'data必须为函数'
+//        }
+//    });
+
+    Vue.component('my-component',{
+        template:'<h1>{{message}}</h1>',
+        data:function () {
+            return {message : 'data必须为函数'};
+        }
+    });
+
+    var vm = new Vue({
+        el:'#component-demo'
+    });
+
+</script>
+</body>
+</html>
