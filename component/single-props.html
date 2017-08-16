@@ -57,7 +57,6 @@
             template:'#myComponent',
             props: ['childName','childAge'],
             data:function () {
-                console.log(this.childName);
                 return {
                     name:'这是我的名字：' + this.childName
                 }
@@ -69,7 +68,7 @@
             el:'#demo',
             data:{
                 parentName:'*茉莉花开*',
-                parentAge:'22'
+                parentAge:22
             },
             components:{
                 'child-component':child
