@@ -34,3 +34,7 @@ vue.js学习之路 <br>
  [props单项数据绑定](https://zwl-jasmine95.github.io/Vue_test/component/single-props.html) <br>
  [props验证](https://zwl-jasmine95.github.io/Vue_test/component/verification-props.html) <br>
 
+ 自定义事件：<br>
+ [v-on绑定自定义事件](https://zwl-jasmine95.github.io/Vue_test/component/v-on.html) <br>
+ [使用template标签](https://zwl-jasmine95.github.io/Vue_test/component/template.html) <br>
+
