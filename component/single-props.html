@@ -36,12 +36,10 @@
             <tr>
                 <td>姓名</td>
                 <td>{{childName}}</td>
-                <td><input type="text" v-model="childName"/></td>
             </tr>
             <tr>
                 <td>年龄</td>
                 <td>{{childAge}}</td>
-                <td><input type="text" v-model="childAge"/></td>
             </tr>
         </table>
     </template>
@@ -50,8 +48,9 @@
     <script type="text/javascript">
 
         var child = {
-            props: ['childName','childAge'],
-            template:'#myComponent'
+            template:'#myComponent',
+            props: ['childName','childAge']
+
         };
 
         var vm = new Vue({
