@@ -35,7 +35,7 @@
             </tr>
             <tr>
                 <td>姓名</td>
-                <td>{{childName}}</td>
+                <td>{{name}}</td>
             </tr>
             <tr>
                 <td>年龄</td>
@@ -47,9 +47,21 @@
     <script type="text/javascript" src="../lib/js/vue.js"></script>
     <script type="text/javascript">
 
+//        var child = {
+//            template:'#myComponent',
+//            props: ['childName','childAge']
+//
+//        };
+
         var child = {
             template:'#myComponent',
-            props: ['childName','childAge']
+            props: ['childName','childAge'],
+            data:function () {
+                console.log(this.childName);
+                return {
+                    name:'这是我的名字：' + this.childName
+                }
+            }
 
         };
 
