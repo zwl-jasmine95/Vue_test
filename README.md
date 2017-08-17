@@ -44,6 +44,8 @@ vue.js学习之路 <br>
  使用slot分发内容：<br>
  [单个slot](https://zwl-jasmine95.github.io/Vue_test/component/single-slot.html) <br>
  [具名slot](https://zwl-jasmine95.github.io/Vue_test/component/name-slot.html) <br>
+ [作用域插槽](https://zwl-jasmine95.github.io/Vue_test/component/special-slot.html) <br>
+ [作用域插槽-列表](https://zwl-jasmine95.github.io/Vue_test/component/list-slot.html) <br>
 
 
 

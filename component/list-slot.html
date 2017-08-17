@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作用域插槽-列表</title>
+    <script type="text/javascript" src="../lib/js/vue.js"></script>
+</head>
+<body>
+<div class="parent">
+    <child>
+        <template scope="props">
+            <span>hello from parent</span>
+            <span>{{ props.text }}</span>
+        </template>
+    </child>
+</div>
+
+<template id="myComponent">
+    <div class="child">
+        <slot text="hello from child">没有分发内容的时候才会显示</slot>
+    </div>
+</template>
+
+<script type="text/javascript">
+    Vue.component('child',{
+        template:'#myComponent'
+    });
+
+    var vm = new Vue({
+        el:'.parent'
+    });
+</script>
+</body>
+</html>
