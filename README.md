@@ -37,4 +37,5 @@ vue.js学习之路 <br>
  自定义事件：<br>
  [v-on绑定自定义事件](https://zwl-jasmine95.github.io/Vue_test/component/v-on.html) <br>
  [使用自定义事件的表单输入组件](https://zwl-jasmine95.github.io/Vue_test/component/input.html) <br>
+ [非父子组件通信](https://zwl-jasmine95.github.io/Vue_test/component/communication.html) <br>
 

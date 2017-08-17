@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>非父子组件通信</title>
+    <script type="text/javascript" src="../lib/js/vue.js"></script>
+</head>
+<body>
+    <div id="demo">
+        <a-component></a-component>
+        <b-component></b-component>
+    </div>
+
+
+    <script type="text/javascript">
+        Vue.component('a-component',{
+            template:'<button @click="submit">提交</button>',
+            methods: {
+                submit() {
+                    // 事件名字自定义，用不同的名字区别事件
+                    this.$root.Bus.$emit('eventName', 123)
+                }
+            }
+        });
+
+        Vue.component('b-component',{
+            template:'<p>{{message}}</p>',
+            data:function () {
+              return {
+                  message:'b子组件'
+              }
+            },
+
+            // 当前实例创建完成就监听这个事件
+            created(){
+                this.$root.Bus.$on('eventName', function (value) {
+                    console.log(value);
+                });
+            },
+
+            // 在组件销毁时别忘了解除事件绑定
+            beforeDestroy() {
+                this.$root.Bus.$off('eventName')
+            }
+        });
+
+        var vm = new Vue({
+            el:'#demo',
+            data: {
+                // 空的实例放到根组件下，所有的子组件都能调用
+                Bus: new Vue()
+            }
+        })
+    </script>
+
+</body>
+</html>
