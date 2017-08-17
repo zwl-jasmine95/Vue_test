@@ -1,6 +1,6 @@
-# Vue_test
+# Vue.js学习demo
 vue.js学习之路 <br>
-## 1.vue.js基础知识
+ ## 1.vue.js基础知识
  以下示例，在博客中有具体讲解，博客链接:http://www.cnblogs.com/jasmine-95/p/6652783.html  <br>
  
  [hello示例](https://zwl-jasmine95.github.io/Vue_test/hello.html) <br>
@@ -13,11 +13,11 @@ vue.js学习之路 <br>
  [v-model指令demo](https://zwl-jasmine95.github.io/Vue_test/v-model.html) <br>
  [v-on指令demo](https://zwl-jasmine95.github.io/Vue_test/v-on.html) <br>
  
-综合案例：<br>
-[简单表格demo](https://zwl-jasmine95.github.io/Vue_test/demo1/table.html) <br>
-[可增删表格demo](https://zwl-jasmine95.github.io/Vue_test/demo1/editTable.html) <br>
+ 综合案例：<br>
+ [简单表格demo](https://zwl-jasmine95.github.io/Vue_test/demo1/table.html) <br>
+ [可增删表格demo](https://zwl-jasmine95.github.io/Vue_test/demo1/editTable.html) <br>
 
-## 2.vue.js组件的使用
+ ## 2.vue.js组件的使用
  以下示例，在博客中有具体讲解，博客链接:http://www.cnblogs.com/jasmine-95/p/6652783.html  <br>
 
  组件的创建与使用：<br>
@@ -31,10 +31,10 @@ vue.js学习之路 <br>
  props——父组件向子组件传递信息：<br>
  [props传递静态数据](https://zwl-jasmine95.github.io/Vue_test/component/static-props.html) <br>
  [props传递动态数据](https://zwl-jasmine95.github.io/Vue_test/component/dynamic-props.html) <br>
- [props单项数据绑定](https://zwl-jasmine95.github.io/Vue_test/component/single-props.html) <br>
+ [props单向数据绑定](https://zwl-jasmine95.github.io/Vue_test/component/single-props.html) <br>
  [props验证](https://zwl-jasmine95.github.io/Vue_test/component/verification-props.html) <br>
 
  自定义事件：<br>
  [v-on绑定自定义事件](https://zwl-jasmine95.github.io/Vue_test/component/v-on.html) <br>
- [使用template标签](https://zwl-jasmine95.github.io/Vue_test/component/template.html) <br>
+ [使用自定义事件的表单输入组件](https://zwl-jasmine95.github.io/Vue_test/component/input.html) <br>
 

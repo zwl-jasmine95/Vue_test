@@ -6,7 +6,7 @@
 </head>
 <body>
     <div id="demo">
-        父组件：<input type="text" v-model="parentMessage">
+        父组件信息：<input type="text" v-model="parentMessage">
         <child-component v-bind:message="parentMessage"></child-component>
     </div>
 
@@ -25,7 +25,7 @@
         var vm = new Vue({
             el:'#demo',
             data:{
-                parentMessage:'这里是父组件！'
+                parentMessage:'这里是父组件信息！'
             },
             components:{
                 'child-component':child
