@@ -6,29 +6,42 @@
     <script type="text/javascript" src="../lib/js/vue.js"></script>
 </head>
 <body>
-<div class="parent">
-    <child>
-        <template scope="props">
-            <span>hello from parent</span>
-            <span>{{ props.text }}</span>
-        </template>
-    </child>
-</div>
-
-<template id="myComponent">
-    <div class="child">
-        <slot text="hello from child">没有分发内容的时候才会显示</slot>
+    <div class="parent">
+        <my-list :items="items">
+            <template slot="item" scope="props">
+                <li class="my-fancy-item">{{ props.text }}</li>
+            </template>
+        </my-list>
     </div>
-</template>
 
-<script type="text/javascript">
-    Vue.component('child',{
-        template:'#myComponent'
-    });
+    <template id="myComponent">
+        <ul>
+            <slot name="item" v-for="item in items" :text="item.text"></slot>
+        </ul>
+    </template>
 
-    var vm = new Vue({
-        el:'.parent'
-    });
-</script>
+    <script type="text/javascript">
+        Vue.component('my-list',{
+            template:'#myComponent',
+            data:function () {
+                return {
+                    items:[
+                        {id:1,text:'列表1'},
+                        {id:2,text:'列表2'},
+                        {id:3,text:'列表3'},
+                        {id:4,text:'列表4'}
+                    ]
+                }
+            }
+        });
+
+        var vm = new Vue({
+            el:'.parent',
+            data:{
+                items:[]
+            }
+        });
+    </script>
+
 </body>
 </html>
