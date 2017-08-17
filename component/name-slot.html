@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>具名slot</title>
+    <script type="text/javascript" src="../lib/js/vue.js"></script>
+</head>
+<body>
+    <div id="demo">
+        <h1>我是父组件</h1>
+        <my-component>
+            <p>这是初始内容1</p>
+            <p>这是初始内容2</p>
+        </my-component>
+    </div>
+
+    <template id="myComponent">
+        <div>
+            <h1>我是子组件的标题</h1>
+            <slot>没有分发内容的时候才会显示</slot>
+        </div>
+    </template>
+
+    <script type="text/javascript">
+
+        Vue.component('my-component',{
+            template:'#myComponent'
+        });
+
+        var vm = new Vue({
+            el:'#demo'
+        });
+    </script>
+</body>
+</html>
