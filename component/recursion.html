@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>递归组件</title>
+    <script type="text/javascript" src="../lib/js/vue.js"></script>
+</head>
+<body>
+<div id="parent">
+    <counter-component :count="0"></counter-component>
+</div>
+
+<template id="counterComponent">
+    <div>
+        <span>{{count}}</span>
+        <counter-component :count="count+1" v-if="countNum">{{count}}</counter-component>
+    </div>
+</template>
+
+<script type="text/javascript">
+    Vue.component('counter-component',{
+        name:'counter-component',
+        template:'#counterComponent',
+        props:['count'],
+        computed:{
+            countNum:function () {
+                return this.count < 10;
+            }
+        }
+    });
+
+    var parent = new Vue({
+        el: '#parent'
+    });
+
+</script>
+</body>
+</html>

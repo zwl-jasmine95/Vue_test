@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>子组件索引</title>
+    <script type="text/javascript" src="../lib/js/vue.js"></script>
+</head>
+<body>
+    <div id="parent">
+        <user-profile ref="profile"></user-profile>
+    </div>
+
+    <script type="text/javascript">
+        Vue.component('user-profile',{
+            template:'<p>{{message}}</p>',
+            data:function () {
+                return {
+                    message:'这里是子组件索引！'
+                }
+            }
+        });
+
+        var parent = new Vue({
+            el: '#parent'
+        });
+        // 访问子组件
+        var child = parent.$refs.profile;
+        console.log(child.$data);   //打印子组件的数据
+    </script>
+</body>
+</html>
