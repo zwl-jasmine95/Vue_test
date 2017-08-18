@@ -17,7 +17,7 @@
         <!-- 点击导航后要切换的内容容器 -->
         <div class="content">
             <!-- 如果把切换出去的组件保留在内存中，可以保留它的状态或避免重新渲染。为此可以添加一个 keep-alive 指令参数 -->
-            <component :is="currentView"></component>
+            <keep-alive><component :is="currentView"></component></keep-alive>
         </div>
     </div>
 
