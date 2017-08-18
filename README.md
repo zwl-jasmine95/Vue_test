@@ -48,7 +48,7 @@ vue.js学习之路 <br>
  [作用域插槽-列表](https://zwl-jasmine95.github.io/Vue_test/component/list-slot.html) <br>
 
  动态组件：<br>
- [动态组件](https://zwl-jasmine95.github.io/Vue_test/component/dynamic-component.html) <br>
+ [动态组件(实现tab切换)](https://zwl-jasmine95.github.io/Vue_test/component/dynamic-component.html) <br>
 
 
 
