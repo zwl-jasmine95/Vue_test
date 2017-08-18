@@ -7,6 +7,48 @@
     <script type="text/javascript" src="../lib/js/vue.js"></script>
 </head>
 <body>
+    <div class="container">
+        <ul class="list-group">
+            <tree-node v-for="item in items" :parent_node="item"></tree-node>
+        </ul>
+    </div>
 
+    <template id="treeNode">
+        <li class="list-group-item" @click="toggle">
+            <span class="glyphicon glyphicon-folder-close"></span>
+            <span class="glyphicon glyphicon-folder-open"></span>
+            {{parent_node.name}}
+        </li>
+    </template>
+
+    <script type="text/javascript">
+        Vue.component('tree-node',{
+            name:'tree-node',
+            template:'#treeNode',
+            props:['parent_node'],
+            methods:{
+                toggle:function () {
+                    console.log(this.parent_node);
+                }
+            }
+        });
+
+        var vm = new Vue({
+            el:'.container',
+            data:{
+                items:[
+                    {
+                        name:'列表1'
+                    },
+                    {
+                        name:'列表2'
+                    },
+                    {
+                        name:'列表3'
+                    }
+                ]
+            }
+        })
+    </script>
 </body>
 </html>
