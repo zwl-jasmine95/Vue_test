@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态组件</title>
+    <link rel="stylesheet" href="../lib/css/bootstrap.min.css">
+    <script type="text/javascript" src="../lib/js/vue.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!--导航栏-->
+        <ul class="nav nav-pills">
+            <li><a href="javascript:void(0)" @click="toggleTab(0)">{{tabText1}}</a></li>
+            <li><a href="javascript:void(0)" @click="toggleTab(1)">{{tabText2}}</a></li>
+            <li><a href="javascript:void(0)" @click="toggleTab(2)">{{tabText3}}</a></li>
+        </ul>
+        <!-- 点击导航后要切换的内容容器 -->
+        <div class="content">
+            <!-- 如果把切换出去的组件保留在内存中，可以保留它的状态或避免重新渲染。为此可以添加一个 keep-alive 指令参数 -->
+            <component :is="currentView"></component>
+        </div>
+    </div>
+
+    <!-- 点击导航后要切换的内容 -->
+    <template id="tab-content1">
+        <div>这是第一个选项卡的内容！</div>
+    </template>
+
+    <template id="tab-content2">
+        <div>这是第二个选项卡的内容！</div>
+    </template>
+
+    <template id="tab-content3">
+        <div>这是第三个选项卡的内容！</div>
+    </template>
+
+    <script type="text/javascript">
+        //局部注册组件(选项卡内容)
+        var tab1 = {
+            template:'#tab-content1'
+        };
+        var tab2 = {
+            template:'#tab-content2'
+        };
+        var tab3 = {
+            template:'#tab-content3'
+        };
+        
+        var vm = new Vue({
+            el:'.container',
+            data:{
+                tabText1:'选项卡1',
+                tabText2:'选项卡2',
+                tabText3:'选项卡3',
+                currentView:tab1
+            },
+            //注册局部组件
+            components:{
+                tabComponent1:tab1,
+                tabComponent2:tab2,
+                tabComponent3:tab3
+            },
+            methods:{
+                toggleTab:function (i) {
+                    var arr = ['tabComponent1','tabComponent2','tabComponent3'];
+                    this.currentView = arr[i];
+                }
+            }
+        
+        })
+    </script>
+</body>
+</html>

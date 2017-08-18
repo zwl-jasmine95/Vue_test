@@ -47,5 +47,8 @@ vue.js学习之路 <br>
  [作用域插槽](https://zwl-jasmine95.github.io/Vue_test/component/special-slot.html) <br>
  [作用域插槽-列表](https://zwl-jasmine95.github.io/Vue_test/component/list-slot.html) <br>
 
+ 动态组件：<br>
+ [动态组件](https://zwl-jasmine95.github.io/Vue_test/component/dynamic-component.html) <br>
+
 
 
