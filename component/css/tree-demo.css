@@ -1,0 +1,21 @@
+.container{
+    border: solid 1px rgba(204, 204, 204, 0.55);
+    margin: 50px auto;
+}
+.list-group-item{
+    list-style: none;
+    border:none;
+
+}
+.list-group-item>div{
+    padding:8px 0;
+    cursor: pointer;
+    border-bottom: solid 1px rgba(204, 204, 204, 0.55);
+
+}
+.list-group-item>div:active{
+    background:rgba(204, 204, 204, 0.55);
+}
+.list-group-item>div span{
+    margin: 0 5px;
+}

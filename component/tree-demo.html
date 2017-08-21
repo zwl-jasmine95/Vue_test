@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>树形组件demo</title>
     <link rel="stylesheet" href="../lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/tree-demo.css">
     <script type="text/javascript" src="../lib/js/vue.js"></script>
 </head>
 <body>
@@ -20,7 +21,6 @@
                 <span v-if="parent_node.open && parent_node.data" class="glyphicon glyphicon-folder-open"></span>
                 {{parent_node.name}}
             </div>
-
 
             <ul v-if="parent_node.data" v-show="parent_node.open">
                 <tree-node v-for="child_node in parent_node.data" :parent_node="child_node" :key="child_node.name"></tree-node>
