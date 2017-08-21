@@ -39,7 +39,7 @@ vue.js学习之路 <br>
  [使用自定义事件的表单输入组件](https://zwl-jasmine95.github.io/Vue_test/component/input.html) <br>
  [非父子组件通信](https://zwl-jasmine95.github.io/Vue_test/component/communication.html) <br>
 
- 以下示例，在博客中有具体讲解，博客链接:[vue.js学习之组件（下篇）](http://www.cnblogs.com/jasmine-95/p/7275178.html)  <br>
+ 以下示例，在博客中有具体讲解，博客链接:[vue.js学习之组件（下篇）](http://www.cnblogs.com/jasmine-95/p/7383707.html)  <br>
 
  使用slot分发内容：<br>
  [单个slot](https://zwl-jasmine95.github.io/Vue_test/component/single-slot.html) <br>
@@ -54,7 +54,7 @@ vue.js学习之路 <br>
  [子组件索引](https://zwl-jasmine95.github.io/Vue_test/component/dynamic-component.html) <br>
  [递归组件](https://zwl-jasmine95.github.io/Vue_test/component/recursion.html) <br>
 
- 组件综合demo：<br>
+ 综合案例：<br>
  [树形组件demo](https://zwl-jasmine95.github.io/Vue_test/component/tree-demo.html) <br>
 
 
