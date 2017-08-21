@@ -9,15 +9,23 @@
 <body>
     <div class="container">
         <ul class="list-group">
-            <tree-node v-for="item in items" :parent_node="item"></tree-node>
+            <tree-node v-for="item in items" :parent_node="item" :key="item.name"></tree-node>
         </ul>
     </div>
 
     <template id="treeNode">
-        <li class="list-group-item" @click="toggle">
-            <span class="glyphicon glyphicon-folder-close"></span>
-            <span class="glyphicon glyphicon-folder-open"></span>
-            {{parent_node.name}}
+        <li class="list-group-item">
+            <div @click="toggle">
+                <span v-if="!parent_node.open && parent_node.data" class="glyphicon glyphicon-folder-close"></span>
+                <span v-if="parent_node.open && parent_node.data" class="glyphicon glyphicon-folder-open"></span>
+                {{parent_node.name}}
+            </div>
+
+
+            <ul v-if="parent_node.data" v-show="parent_node.open">
+                <tree-node v-for="child_node in parent_node.data" :parent_node="child_node" :key="child_node.name"></tree-node>
+            </ul>
+
         </li>
     </template>
 
@@ -28,7 +36,8 @@
             props:['parent_node'],
             methods:{
                 toggle:function () {
-                    console.log(this.parent_node);
+                    var self = this.parent_node;
+                    self.open = !self.open;
                 }
             }
         });
@@ -38,13 +47,27 @@
             data:{
                 items:[
                     {
-                        name:'列表1'
+                        name:'列表1',
+                        open:true,
+                        data:[
+                            {name:'列表11'},
+                            {name:'列表12'},
+                            {name:'列表13'}
+                        ]
                     },
                     {
-                        name:'列表2'
+                        name:'列表2',
+                        open:false,
+                        data:[
+                            {name:'列表21'},
+                            {name:'列表22'},
+                            {name:'列表23'}
+                        ]
                     },
                     {
-                        name:'列表3'
+                        name:'列表3',
+                        open:false,
+                        data:[]
                     }
                 ]
             }
