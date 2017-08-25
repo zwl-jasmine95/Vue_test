@@ -59,4 +59,9 @@ vue.js学习之路 <br>
 
 
 
+ ## 3.vue 2.0构建单页应用
+ [vue2.0构建单页应用](https://zwl-jasmine95.github.io/Vue_test/component/tree-demo.html) <br>
+
+
+
 
