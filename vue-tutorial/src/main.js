@@ -24,10 +24,6 @@ const router = new VueRouter({
 var app = new Vue({
   el: '#app',
   router,
-  ...App
-});
-// new Vue({
-//   el: '#app',
-//   template: '<App/>',
-//   components: { App }
-// })
+  template: '<App/>',
+  components: { App }
+})

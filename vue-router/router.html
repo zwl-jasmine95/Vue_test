@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue-router</title>
+    <link rel="stylesheet" href="../lib/css/bootstrap.min.css">
+    <script type="text/javascript" src="../lib/js/vue.js"></script>
+    <script type="text/javascript" src="../lib/js/vue-router.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <i class="glyphicon glyphicon-time"></i>
+                    导航栏
+                </a>
+                <ul class="nav navbar-nav">
+                    <li><router-link to="/foo">foo</router-link></li>
+                    <li><router-link to="/bar">bar</router-link></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container">
+            <router-view></router-view>
+        </div>
+    </div>
+
+<script type="text/javascript">
+    const Foo = { template: '<div>foo</div>' }
+    const Bar = { template: '<div>bar</div>' }
+    const routes = [
+        { path: '/foo', component: Foo },
+        { path: '/bar', component: Bar }
+    ]
+
+    const router = new VueRouter({
+        routes
+    });
+
+    var app = new Vue({
+        el: '#wrapper',
+        router
+    })
+
+
+</script>
+
+</body>
+</html>

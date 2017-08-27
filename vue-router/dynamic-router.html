@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态路由</title>
+    <link rel="stylesheet" href="../lib/css/bootstrap.min.css">
+    <script type="text/javascript" src="../lib/js/vue.js"></script>
+    <script type="text/javascript" src="../lib/js/vue-router.js"></script>
+</head>
+<body>
+<div id="app">
+    <p>
+        <router-link to="/user/foo"> user-foo</router-link>
+        <router-link to="/user/bar"> user-bar</router-link>
+    </p>
+    <router-view></router-view>
+</div>
+
+<script type="text/javascript">
+    const user = { template: '<div>{{$route.params.id}}</div>' }
+    const routes = [
+        { path: '/user/:id', component: user }
+    ]
+
+    const router = new VueRouter({
+        routes
+    });
+
+    var app = new Vue({
+        el: '#app',
+        router
+    })
+
+
+</script>
+
+</body>
+</html>

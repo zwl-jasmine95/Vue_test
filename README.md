@@ -57,10 +57,11 @@ vue.js学习之路 <br>
  综合案例：<br>
  [树形组件demo](https://zwl-jasmine95.github.io/Vue_test/component/tree-demo.html) <br>
 
+ ## 3.vue-router路由
+ [vue-router路由](https://zwl-jasmine95.github.io/Vue_test/vue-router/router.html) <br>
+ [动态路由](https://zwl-jasmine95.github.io/Vue_test/vue-router/dynamic-router.html) <br>
 
 
- ## 3.vue 2.0构建单页应用
- [vue2.0构建单页应用](https://zwl-jasmine95.github.io/Vue_test/component/tree-demo.html) <br>
 
 
 
