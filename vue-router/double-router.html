@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>嵌套路由</title>
+    <link rel="stylesheet" href="../lib/css/bootstrap.min.css">
+    <script type="text/javascript" src="../lib/js/vue.js"></script>
+    <script type="text/javascript" src="../lib/js/vue-router.js"></script>
+</head>
+<body>
+<div id="app">
+    <p>
+        <router-link to="/user/foo"> user-foo</router-link>
+        <router-link to="/user/foo/profile"> user-foo-profile</router-link>
+        <router-link to="/user/foo/posts"> user-foo-posts</router-link>
+    </p>
+    <router-view></router-view>
+</div>
+
+<script type="text/javascript">
+    const user = { template: '<div class="user"><h2>{{$route.params.id}}</h2><router-view></router-view></div>' }
+
+    const UserHome = { template: '<div>Home</div>' }
+    const UserProfile = { template: '<div>Profile</div>' }
+    const UserPosts = { template: '<div>Posts</div>' }
+
+    const routes = [
+        {
+            path: '/user/:id', component: user,
+            children:[
+                {path:'',component:UserHome},
+                {path:'profile',component:UserProfile},
+                {path:'posts',component:UserPosts}
+            ]
+        }
+    ]
+
+    const router = new VueRouter({
+        routes
+    });
+
+    var app = new Vue({
+        el: '#app',
+        router
+    })
+
+
+</script>
+
+</body>
+</html>

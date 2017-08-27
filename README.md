@@ -60,6 +60,7 @@ vue.js学习之路 <br>
  ## 3.vue-router路由
  [vue-router路由](https://zwl-jasmine95.github.io/Vue_test/vue-router/router.html) <br>
  [动态路由](https://zwl-jasmine95.github.io/Vue_test/vue-router/dynamic-router.html) <br>
+ [嵌套路由](https://zwl-jasmine95.github.io/Vue_test/vue-router/double-router.html) <br>
 
 
 
