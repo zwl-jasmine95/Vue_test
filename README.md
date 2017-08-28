@@ -62,6 +62,9 @@ vue.js学习之路 <br>
  [动态路由](https://zwl-jasmine95.github.io/Vue_test/vue-router/dynamic-router.html) <br>
  [嵌套路由](https://zwl-jasmine95.github.io/Vue_test/vue-router/double-router.html) <br>
 
+ ## 3.vue2.0构建单页应用
+ [vue2.0构建单页应用教程](http://www.meckodo.com/#!/article/5886157b6d67c807096f6c8c) <br>
+
 
 
 
